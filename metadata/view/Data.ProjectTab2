@@ -1,0 +1,404 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "anchorSize": [
+            "'100% 20%'"
+        ],
+        "container|align": "stretch",
+        "designer|userAlias": "dataprojecttab2",
+        "designer|userClassName": "Data.ProjectTab2",
+        "height": 10280,
+        "itemId": "contentPanel4",
+        "layout": "vbox",
+        "title": "บริหารจัดการยุทธศาสตร์",
+        "titleAlign": "center"
+    },
+    "name": "ProjectTab2",
+    "configAlternates": {
+        "anchorSize": "object"
+    },
+    "designerId": "d8409d47-991d-4eef-ab7b-6e1b063a0cdd",
+    "viewControllerInstanceId": "3a30547b-ff89-4ecb-a7dc-6e21264b9cf0",
+    "viewModelInstanceId": "e44aa0ee-a7b2-436c-8c44-8078792e26ef",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "container|align": "stretch",
+                "dock": "top",
+                "layout": "hbox",
+                "layout|flex": 1,
+                "title": "ค้นหา"
+            },
+            "name": "MyForm3",
+            "designerId": "f9d030f9-29b0-4a7d-9a44-75791a0778d7",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Label",
+                        "labelAlign": "right",
+                        "margin": "5 10 5 150",
+                        "width": 300
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "646eda0e-8fb9-42b4-9ba5-61a53b287f56"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": "5 0 5 0",
+                        "text": "Search"
+                    },
+                    "name": "MyButton10",
+                    "designerId": "4b55b7f3-5b8a-4c99-9465-ea23513cd599",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onButtonSerchClick1",
+                                "implHandler": [
+                                    "        this.getref"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "name": "onButtonSerchClick1",
+                            "designerId": "0326d2fe-9a39-4262-9cea-d02af1036ecc"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.grid.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoLoad": true,
+                "autoScroll": true,
+                "columnLines": true,
+                "defaultListenerScope": null,
+                "enableColumnHide": false,
+                "height": 89,
+                "layout|flex": 4,
+                "store": "StrategyModel",
+                "title": "รายการ ยุทธศาสตร์",
+                "width": 1280
+            },
+            "name": "MyGridPanel1",
+            "designerId": "8b25104e-af9e-417e-9c4e-684d3f4e6a25",
+            "cn": [
+                {
+                    "type": "Ext.grid.column.RowNumberer",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyRowNumberer",
+                    "designerId": "b7a407ca-76f5-48c7-8562-bed286ce962b"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "id",
+                        "hidden": true,
+                        "text": "ID"
+                    },
+                    "name": "MyColumn2",
+                    "designerId": "755e9ceb-5d73-456e-80f3-4866e7484280"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "strategic_id",
+                        "groupable": true,
+                        "hidden": true,
+                        "text": "strategic_id"
+                    },
+                    "name": "MyColumn",
+                    "designerId": "2f5c8d7b-7624-4cc6-a058-b5b73a4ed570"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "strategy_name",
+                        "text": "strategic_name"
+                    },
+                    "name": "MyColumn1",
+                    "designerId": "a2d6f039-a3b3-4993-970d-556369cdfb75"
+                },
+                {
+                    "type": "Ext.grid.column.Column",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dataIndex": "name",
+                        "flex": -1,
+                        "text": "name"
+                    },
+                    "name": "MyColumn3",
+                    "designerId": "66095681-1996-478c-9317-d24e11905f9d"
+                },
+                {
+                    "type": "Ext.grid.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyGridView",
+                    "designerId": "b96ee303-4f85-4190-9e3d-5afbb4fac8d3"
+                },
+                {
+                    "type": "Ext.selection.RowModel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyRowSelectionModel1",
+                    "designerId": "3eb564c8-ad03-47ed-a382-ae1e67bf7c83"
+                },
+                {
+                    "type": "Ext.toolbar.Paging",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayInfo": true,
+                        "dock": "bottom",
+                        "width": 360
+                    },
+                    "name": "MyPagingToolbar1",
+                    "designerId": "987e3a65-e7e1-4bf6-b03d-91e45c59e62c"
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "name": "MyToolbar1",
+                    "designerId": "2370302f-356c-4812-abd0-d7e76c480c4e",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "Add"
+                            },
+                            "name": "MyButton7",
+                            "designerId": "42d3a095-e15a-4188-ae8b-39edeff4c5e2",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonAddClick1",
+                                        "implHandler": [
+                                            "",
+                                            "console.log(eOpts);",
+                                            "",
+                                            "var record = this.getView().getComponent('grid-strategy').getSelectionModel().getSelection()[0];",
+                                            "",
+                                            "var popup = Ext.create('widget.windowformaddstrategy',{",
+                                            "",
+                                            "    record :record,",
+                                            "    intend:'',",
+                                            "    listeners: {",
+                                            "        close: function (panel, eOpts) {",
+                                            "            console.log(panel);",
+                                            "            console.log(panel.intend);",
+                                            "            if (panel.intend === 'save-success') {",
+                                            "                console.log('insave success');",
+                                            "                //me.search(window.gridSizesData,me.username);",
+                                            "            }",
+                                            "        }",
+                                            "    }",
+                                            "",
+                                            "});",
+                                            "//call frist load form to set value",
+                                            "//popup.onLoad(record);",
+                                            "popup.show();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonAddClick1",
+                                    "designerId": "82134eef-1415-40c7-88e6-ae1a7e7236c3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "Edit"
+                            },
+                            "name": "MyButton8",
+                            "designerId": "b5fcab10-ed3a-4cc7-8d79-664df9aab2cf",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonEditClick1",
+                                        "implHandler": [
+                                            "var popup = Ext.create('widget.windowformaddstrategy',button);",
+                                            "popup.show();"
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonEditClick1",
+                                    "designerId": "6e6e4b31-7def-4451-bb96-dcb3145a9ad5"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "text": "Delete"
+                            },
+                            "name": "MyButton9",
+                            "designerId": "34ccffaf-2383-4026-9acf-68f7c5da268d",
+                            "cn": [
+                                {
+                                    "type": "viewcontrollereventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onButtonDeleteClick1",
+                                        "implHandler": [
+                                            "Ext.MessageBox.confirm('Confirm', 'Are you sure you want to do that?', this.showResult, this);",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "name": "onButtonDeleteClick1",
+                                    "designerId": "1f063fae-f285-46bc-8ddc-ad6b4a29d2d3"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.grid.feature.Grouping",
+                    "reference": {
+                        "name": "features",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "groupByText": null,
+                        "showGroupsText": null,
+                        "startCollapsed": true
+                    },
+                    "name": "MyGroupingFeature",
+                    "designerId": "6cf418e4-830a-404a-95d5-d8d60884daa1",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "groupHeaderTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "groupHeaderTpl",
+                                "implHandler": [
+                                    "{columnName}: {name}"
+                                ]
+                            },
+                            "name": "groupHeaderTpl",
+                            "designerId": "d8851d99-4864-438a-9059-9e628b20000f"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dataprojecttab5",
+        "designer|userClassName": "Data.ProjectTab5ViewController"
+    },
+    "name": "Data.ProjectTab3ViewController1",
+    "designerId": "47022823-659d-4e0d-913b-0e4252d3729b"
+}

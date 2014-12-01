@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainActivityModel"
+    },
+    "name": "MyModel1",
+    "designerId": "dbc66ec5-da93-49b9-b11f-7726e1868b60",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyInteger12",
+            "designerId": "afcd7a58-9306-4451-a52c-eb34574778aa"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyString5",
+            "designerId": "943e7aee-0227-452c-9cd2-2c10f5735eec"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "parent_id"
+            },
+            "name": "MyInteger13",
+            "designerId": "f7d0643a-931a-40cb-af2e-bd909eaa5a79"
+        }
+    ]
+}

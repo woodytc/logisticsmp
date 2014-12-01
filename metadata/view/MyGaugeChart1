@@ -1,0 +1,120 @@
+{
+    "type": "Ext.chart.PolarChart",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animation": true,
+        "colors": [
+            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+        ],
+        "designer|userAlias": "mygaugechart1",
+        "designer|userClassName": "MyGaugeChart1",
+        "height": 150,
+        "margin": "10 10 10 10",
+        "shadow": true,
+        "simpleDrag": true,
+        "store": "Overview",
+        "title": "Gauge",
+        "titleAlign": "center",
+        "titleCollapse": true,
+        "width": "100%"
+    },
+    "name": "MyGaugeChart1",
+    "configAlternates": {
+        "animation": "boolean"
+    },
+    "designerId": "72f392aa-ad56-43c8-9f74-2bf33f9c30ef",
+    "isBuiltIn": true,
+    "iconCls": "icon-gauge-chart",
+    "autoName": "MyGaugeChart",
+    "viewControllerInstanceId": "d0ca5526-2db7-43b6-9d2a-946703e45528",
+    "viewModelInstanceId": "e54e11c8-7419-4ad2-9d65-46ddbf24ac8b",
+    "cn": [
+        {
+            "type": "Ext.chart.series.Gauge",
+            "reference": {
+                "name": "series",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "donut": 30,
+                "field": "progress",
+                "needle": true,
+                "needleWidth": 5,
+                "sectors": [
+                    "[{",
+                    "         end: 200,",
+                    "         label: 'Cold',",
+                    "         color: 'aqua'",
+                    "     },",
+                    "     {",
+                    "         end: 700,",
+                    "         label: 'Temp.',",
+                    "         color: 'lightgray',",
+                    "         style: { strokeStyle:'black', strokeOpacity:1, lineWidth:1 }",
+                    "     },",
+                    "     {",
+                    "         label: 'Hot',",
+                    "         color: 'tomato'",
+                    "     }]"
+                ]
+            },
+            "name": "MyGaugeSeries",
+            "designerId": "f1d369f6-311f-49d0-8ff3-3afcc4a8eb58",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "sprite",
+                            "record",
+                            "attributes",
+                            "index",
+                            "store"
+                        ],
+                        "fn": "renderer",
+                        "implHandler": [
+                            "console.log(attributes);",
+                            "return attributes;"
+                        ]
+                    },
+                    "name": "renderer",
+                    "designerId": "1b5e9307-8023-47aa-8940-3e52d06c6134"
+                }
+            ]
+        },
+        {
+            "type": "viewcontrollereventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPolarResize1",
+                "implHandler": [
+                    "",
+                    "                        var newX = width/2 + 3,",
+                    "                            newY = height - 73;",
+                    "",
+                    "                        console.log(' i am resized from ' + oldWidth + ' ' + oldHeight + ' to ' + width + ' ' + height);",
+                    "                        ",
+                    ""
+                ],
+                "name": "resize",
+                "scope": "me"
+            },
+            "name": "onPolarResize1",
+            "designerId": "b0cb1139-c12d-4387-aa1a-d59422e1c12a"
+        }
+    ]
+}

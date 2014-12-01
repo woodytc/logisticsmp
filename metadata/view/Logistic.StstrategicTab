@@ -1,0 +1,316 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "anchorSize": [
+            "'100% 20%'"
+        ],
+        "container|align": "stretch",
+        "designer|userAlias": "logisticststrategictab",
+        "designer|userClassName": "Logistic.StstrategicTab",
+        "itemId": "contentPanel2",
+        "layout": "vbox",
+        "title": "Ststrategic",
+        "titleAlign": "center"
+    },
+    "name": "Overview1",
+    "configAlternates": {
+        "anchorSize": "object"
+    },
+    "designerId": "44070e46-14cb-4424-b167-d1f467ce598c",
+    "viewControllerInstanceId": "a7a5ea74-067f-4aba-a075-57b749337143",
+    "viewModelInstanceId": "e1407662-cf11-4433-9307-140855f12e75",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "anchor": "100% 50%",
+                "anchorSize": null,
+                "collapseFirst": false,
+                "collapsible": false,
+                "container|align": "stretchmax",
+                "container|pack": "center",
+                "dock": null,
+                "height": 73,
+                "layout": "hbox",
+                "layout|flex": null,
+                "layout|margins": "0 10 10 0",
+                "minHeight": null,
+                "title": "Statrategic Form",
+                "titleAlign": "center"
+            },
+            "name": "MyForm",
+            "designerId": "25b09a9b-9e4c-44b5-9a3c-5dd2cf622fd7",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "anchor",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "name",
+                        "fieldLabel": "Plz-Ststrategic",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "5 250 5 250",
+                        "store": "StstrategicStore",
+                        "valueField": "id"
+                    },
+                    "name": "MyComboBox",
+                    "designerId": "8728aeea-eb63-403d-bdeb-a115a2d65e53",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onComboboxSelect",
+                                "implHandler": [
+                                    "console.log(records);"
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "name": "onComboboxSelect",
+                            "designerId": "20a496e1-f63a-4cfa-b9cb-139443c7e438"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": false,
+                "container|align": "stretchmax",
+                "designer|displayName": "BarChartStstrategicOverview",
+                "layout": "vbox",
+                "layout|flex": 2,
+                "title": "Bar-chart-Ststrategic-Overview",
+                "titleAlign": "center"
+            },
+            "name": "MyPanel8",
+            "designerId": "abd32458-e937-4a31-aeb8-ebe02222799a",
+            "cn": [
+                {
+                    "type": "Ext.chart.CartesianChart",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "colors": [
+                            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                        ],
+                        "designer|displayName": "BStstrategic",
+                        "dock": "top",
+                        "flipXY": true,
+                        "height": 429,
+                        "layout|flex": -1,
+                        "margin": "10 10 10 10",
+                        "store": "BarCharOverViewStore",
+                        "title": "ภาพรวมโครงการ",
+                        "titleAlign": "center"
+                    },
+                    "name": "MyBarChart",
+                    "designerId": "d12ffc05-f4c6-4544-8bf8-1ff55cc1353e",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-bar-chart",
+                    "autoName": "MyBarChart",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.axis.Category",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "name"
+                                ],
+                                "grid": true,
+                                "label": [
+                                    "{ rotate: {",
+                                    "                        degrees: -45",
+                                    "                    }",
+                                    "                    }"
+                                ],
+                                "labelInSpan": true,
+                                "position": "left",
+                                "title": [
+                                    "โครงการ"
+                                ]
+                            },
+                            "name": "MyCategoryAxis",
+                            "configAlternates": {
+                                "grid": "boolean"
+                            },
+                            "designerId": "ed9c2f90-7262-4e4e-b17a-cddc5abdfe35"
+                        },
+                        {
+                            "type": "Ext.chart.axis.Numeric",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "Current",
+                                    "progress"
+                                ],
+                                "grid": true,
+                                "title": [
+                                    "ความก้าวหน้า %"
+                                ]
+                            },
+                            "name": "MyNumericAxis",
+                            "configAlternates": {
+                                "grid": "boolean"
+                            },
+                            "designerId": "527bbe91-150f-4aa7-832f-212e40362e57"
+                        },
+                        {
+                            "type": "Ext.chart.series.Bar",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "xField": "name",
+                                "yField": [
+                                    "Current",
+                                    "progress"
+                                ]
+                            },
+                            "name": "MyBarSeries",
+                            "designerId": "35213524-0439-4bee-a1dd-83bd654ccdd7"
+                        },
+                        {
+                            "type": "Ext.chart.interactions.PanZoom",
+                            "reference": {
+                                "name": "interactions",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyPanZoomInteraction",
+                            "designerId": "2f59def6-79c6-4033-9e0f-827d87196672"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "title": "Grid"
+            },
+            "name": "MyPanel4",
+            "designerId": "4ab34753-ead0-4e34-9fdf-111cf8c5deee",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoRender": true,
+                        "autoScroll": true,
+                        "margin": "4 4 4 4",
+                        "store": "StstrategicStore",
+                        "title": null
+                    },
+                    "name": "MyGridPanel",
+                    "configAlternates": {
+                        "scroll": "boolean"
+                    },
+                    "designerId": "fa73bd67-0f1c-4e6a-899e-b5d85370347a",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "name",
+                                "flex": 3,
+                                "text": "MyColumn"
+                            },
+                            "name": "MyColumn",
+                            "designerId": "ebdc88a4-9950-43dc-ba40-a17e49d3deff"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "current",
+                                "flex": 1,
+                                "text": "MyColumn1"
+                            },
+                            "name": "MyColumn1",
+                            "designerId": "1bd1b5c2-160f-44c2-965c-3178a3153572"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "budget",
+                                "flex": 1,
+                                "text": "MyColumn2"
+                            },
+                            "name": "MyColumn2",
+                            "designerId": "85966f31-6b0f-4386-a876-8f9c6971ee75"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

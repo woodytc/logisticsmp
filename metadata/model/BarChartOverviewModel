@@ -1,0 +1,67 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "BarChartOverviewModel"
+    },
+    "name": "MyModel",
+    "designerId": "8f1cb79a-ed97-414e-9e02-dc2d38541f4f",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField4",
+            "designerId": "a23dda43-6a4a-49da-860b-24681096c5c2"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField5",
+            "designerId": "811c7604-0ba2-4f01-ad18-e10fbb4812cc"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Current"
+            },
+            "name": "MyField6",
+            "designerId": "e849b966-a84d-4437-babc-322d0e0c985d"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "progress"
+            },
+            "name": "MyField7",
+            "designerId": "b6242481-0331-46e2-af69-33a32f072c44"
+        }
+    ]
+}

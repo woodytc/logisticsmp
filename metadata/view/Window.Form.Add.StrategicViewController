@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "windowformaddstrategic",
+        "designer|userClassName": "Window.Form.Add.StrategicViewController"
+    },
+    "designerId": "5d8460f3-26a6-4944-b550-3f370c9c4526"
+}

@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ststrategictab",
+        "designer|userClassName": "OverviewViewController1"
+    },
+    "name": "OverviewViewController1",
+    "designerId": "a7a5ea74-067f-4aba-a075-57b749337143"
+}

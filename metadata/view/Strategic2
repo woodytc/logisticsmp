@@ -1,0 +1,103 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "strategic2",
+        "designer|userClassName": "Strategic2",
+        "height": 190,
+        "modal": true,
+        "resizable": false,
+        "title": "From Add Strategic",
+        "titleAlign": "center",
+        "width": 392
+    },
+    "name": "Window.Form.Add.Strategic2",
+    "configAlternates": {
+        "resizable": "boolean"
+    },
+    "designerId": "fff4a5e0-a35a-445d-a8ac-54d3aed33d7f",
+    "viewControllerInstanceId": "c0607491-4fe7-45d2-8608-a5b20e005a31",
+    "viewModelInstanceId": "0c90c855-da81-4e92-80c9-973c4601f87e",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "height": 250,
+                "layout": "auto",
+                "title": "Add Strategic",
+                "width": 400
+            },
+            "name": "MyForm3",
+            "designerId": "a8e4bbe7-2e3e-4ab8-932e-49e4293e8e0a",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Name",
+                        "labelAlign": "right",
+                        "width": 273
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "8b6148db-e48f-43b1-98b7-bc921fd749ce"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Year",
+                        "labelAlign": "right"
+                    },
+                    "name": "MyComboBox1",
+                    "designerId": "14df7d49-cfa8-467f-91b1-69e5507d0b5a"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": "10 10 10 100",
+                        "text": "Save"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "8a6b7b74-a121-47e9-b025-a04582789151"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": "10 10 10 10",
+                        "text": "Reset"
+                    },
+                    "name": "MyButton6",
+                    "designerId": "47a4f36c-5383-41c6-bf2d-df8f83e3f0bd"
+                }
+            ]
+        }
+    ]
+}

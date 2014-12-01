@@ -1,0 +1,56 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "GaugeModel",
+            "BarChartOverviewModel",
+            "ProjectModel",
+            "StstrategicModel",
+            "ModelProject",
+            "StrategicModel",
+            "StrategyModel",
+            "ActivityModel",
+            "MainActivityModel",
+            "YearModel"
+        ],
+        "name": "LogisticSMP",
+        "stores": [
+            "GaugeStore",
+            "BarCharOverViewStore",
+            "ProjectStore",
+            "StstrategicStore",
+            "StrategicModel",
+            "ProjectModels",
+            "StrategyModel",
+            "ActivityModel",
+            "MainActivityModel",
+            "ActivityJsonPTreeStore",
+            "YearArrayStore"
+        ],
+        "views": [
+            "MainView",
+            "Overview",
+            "StstrategicTab",
+            "ProjectTab",
+            "Data.MainTabData",
+            "Strategic2",
+            "Data.ProjectTab1",
+            "Data.ProjectTab2",
+            "Data.ProjectTab4",
+            "Data.ProjectTab3",
+            "TreeGrid",
+            "Data.ProjectTab5",
+            "Window.Form.Add.Strategic",
+            "StrategicModels",
+            "Window.Form.Add.Strategy",
+            "Window.Form.Add.Project"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

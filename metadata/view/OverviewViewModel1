@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ststrategictab",
+        "designer|userClassName": "OverviewViewModel1"
+    },
+    "name": "OverviewViewModel1",
+    "designerId": "e1407662-cf11-4433-9307-140855f12e75"
+}

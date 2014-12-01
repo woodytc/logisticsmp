@@ -1,0 +1,175 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "layout": "border",
+        "margin": "5 5 5 5",
+        "requires": [
+            "Ext.draw.Color",
+            "Ext.chart.interactions.ItemHighlight"
+        ]
+    },
+    "designerId": "f194bb58-5f89-41a2-beae-17c7caaac065",
+    "viewControllerInstanceId": "f2bd1090-6f3f-4159-820c-fb43ceed73cd",
+    "viewModelInstanceId": "659810a2-a7ae-4bc0-96a5-f51d0aa6831d",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 100,
+                "hidden": true,
+                "itemId": "headerPanel",
+                "layout|region": "north",
+                "title": "Header"
+            },
+            "name": "MyPanel1",
+            "designerId": "81a48003-3cad-44d5-84be-0cbef110a33a"
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0,
+                "anchorSize": [
+                    "'100% 20%'"
+                ],
+                "itemId": "contentPanel4",
+                "layout|region": "center",
+                "title": "Content"
+            },
+            "name": "MyTabPanel2",
+            "configAlternates": {
+                "anchorSize": "object"
+            },
+            "designerId": "10bcd665-1db9-4549-a122-8417e05071b4",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "overview",
+                    "designerId": "fee11be0-9c06-4f17-92c8-316ae9f1d33a",
+                    "masterInstanceId": "6983e42c-def0-41a3-8f72-c61f522f9d99",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig",
+                            "designerId": "b2352f74-addc-47db-ae5b-34aad920962c"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "ststrategictab",
+                    "designerId": "c31859f8-0681-4bc0-82c5-6f724f9fcd77",
+                    "masterInstanceId": "44070e46-14cb-4424-b167-d1f467ce598c",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig2",
+                            "designerId": "478f8844-beaa-4747-8509-2c6f7653dc33"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "projecttab",
+                    "designerId": "cbf6c360-1dc9-47dc-ad0e-77ea85a78156",
+                    "masterInstanceId": "c466407f-808a-4031-83e8-981185d47783",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig1",
+                            "designerId": "a1898471-d6ec-438d-99b5-57fade089ee9"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "data.maintabdata",
+                    "designerId": "6793df1e-37f0-4037-9d1c-1ee4010d8c16",
+                    "masterInstanceId": "c8da215c-d038-49f9-8913-7cdbd191887b",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig3",
+                            "designerId": "6bd5a834-d38a-449a-be43-d2a0a1d0598f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 100,
+                "hidden": true,
+                "itemId": "footerPanel",
+                "layout|region": "south",
+                "title": "Footer"
+            },
+            "name": "MyPanel3",
+            "designerId": "7a809cb8-9d6e-47f3-b007-0bbaa0761b21"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "type": "Ext.tree.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "treegrid",
+        "designer|userClassName": "TreeGrid",
+        "height": 250,
+        "store": "ActivityJsonPTreeStore",
+        "title": "My Tree Grid Panel",
+        "width": "100%"
+    },
+    "name": "TreeGrid",
+    "designerId": "f0ebbfaf-7c3c-4333-8b62-2b1f664852a3",
+    "isBuiltIn": true,
+    "iconCls": "icon-treegridpanel",
+    "autoName": "TreeGrid",
+    "viewControllerInstanceId": "5a68861e-8c6b-48f0-ad18-258f0ae6320e",
+    "viewModelInstanceId": "4dcf69e1-0b08-49e1-a97d-37561c1ec1ee",
+    "cn": [
+        {
+            "type": "Ext.tree.View",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyTreeView",
+            "designerId": "c41f6d88-85cd-43f6-bf8c-9e5769b20c3a"
+        },
+        {
+            "type": "Ext.tree.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "task",
+                "flex": 1,
+                "text": "Nodes"
+            },
+            "name": "MyTreeColumn",
+            "designerId": "9c7ec9d5-8153-4053-a247-9ff70459de06"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "name",
+                "text": "Value"
+            },
+            "name": "MyColumn7",
+            "designerId": "10483d55-9e02-4ac8-a620-b92a2a628a8d"
+        },
+        {
+            "type": "Ext.grid.column.Column",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dataIndex": "project_id",
+                "text": "MyColumn8"
+            },
+            "name": "MyColumn8",
+            "designerId": "a071a248-bd13-4825-8f77-f540ff1bf0ed"
+        }
+    ]
+}

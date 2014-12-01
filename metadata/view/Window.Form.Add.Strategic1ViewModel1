@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "strategic2",
+        "designer|userClassName": "Window.Form.Add.Strategic1ViewModel1"
+    },
+    "name": "Window.Form.Add.Strategic1ViewModel1",
+    "designerId": "0c90c855-da81-4e92-80c9-973c4601f87e"
+}

@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "projecttab",
+        "designer|userClassName": "OverviewViewController2"
+    },
+    "name": "OverviewViewController2",
+    "designerId": "36c8cab5-dbb3-415e-a86b-0ef1f5e6ca46"
+}

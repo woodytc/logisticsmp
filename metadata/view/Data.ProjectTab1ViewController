@@ -1,0 +1,34 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dataprojecttab1",
+        "designer|userClassName": "Data.ProjectTab1ViewController"
+    },
+    "designerId": "59f21d7e-281e-4173-8d60-125207b7525e",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "deleteConfirm",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "deleteConfirm",
+            "designerId": "f732bb4b-9392-4202-800a-88807b04c541"
+        }
+    ]
+}

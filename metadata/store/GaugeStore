@@ -1,0 +1,52 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"id\": 246,",
+            "        \"overview\": 9.32,",
+            "        \"project\": 818.51,",
+            "        \"budget\": 367.05",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "GaugeStore",
+        "model": "GaugeModel",
+        "storeId": "GaugeStore"
+    },
+    "name": "MyJsonStore",
+    "designerId": "af1a1dd3-4a0d-4315-8124-52eaf487e6cd",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Chart.Gauge"
+            },
+            "name": "MyMemoryProxy",
+            "designerId": "43cfbaff-9839-418e-a9df-0e46ab13a104",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader",
+                    "designerId": "3d08eca2-9a7e-4217-9243-ae0ba1646553"
+                }
+            ]
+        }
+    ]
+}

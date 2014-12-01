@@ -1,0 +1,355 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "anchorSize": [
+            "'100% 20%'"
+        ],
+        "container|align": "stretch",
+        "designer|userAlias": "overview",
+        "designer|userClassName": "Overview",
+        "itemId": "contentPanel1",
+        "layout": "vbox",
+        "title": "หน้าหลัก",
+        "titleAlign": "center"
+    },
+    "name": "MyPanel2",
+    "configAlternates": {
+        "anchorSize": "object"
+    },
+    "designerId": "6983e42c-def0-41a3-8f72-c61f522f9d99",
+    "viewControllerInstanceId": "b1827479-1313-473c-8c80-1aeb09dccdc4",
+    "viewModelInstanceId": "cb70bc9c-6fd8-4e0b-a13a-87b5f7d20751",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "anchor": "100% 50%",
+                "anchorSize": null,
+                "collapseFirst": false,
+                "collapsible": false,
+                "container|align": "stretchmax",
+                "container|pack": "center",
+                "dock": null,
+                "height": "",
+                "layout": "hbox",
+                "layout|flex": 1,
+                "layout|margins": "0 10 10 0",
+                "minHeight": null,
+                "title": null,
+                "titleAlign": "center"
+            },
+            "name": "MyPanel7",
+            "designerId": "b666f324-6bb8-4b60-9e95-b46ca8bbd0a2",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "anchor",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.chart.PolarChart",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "colors": [
+                            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                        ],
+                        "designer|displayName": "GOverView",
+                        "designer|uiInterfaceName": "light",
+                        "dock": null,
+                        "height": 198,
+                        "layout|flex": 1,
+                        "store": "GaugeStore",
+                        "title": "temp",
+                        "titleAlign": "center",
+                        "titleCollapse": true,
+                        "ui": "light",
+                        "width": 208
+                    },
+                    "name": "MyGaugeChart",
+                    "designerId": "db57956a-3e5d-4ce7-bec8-9ee7649deaff",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-gauge-chart",
+                    "autoName": "MyGaugeChart",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.series.Gauge",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "donut": 30,
+                                "field": "overview",
+                                "maximum": 1000,
+                                "needle": true
+                            },
+                            "name": "MyGaugeSeries",
+                            "designerId": "2b1d53d4-595a-4899-8212-b50f1f9ff24b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.chart.PolarChart",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "colors": [
+                            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                        ],
+                        "designer|displayName": "GProject",
+                        "designer|uiInterfaceName": "light",
+                        "dock": null,
+                        "layout|flex": 1,
+                        "store": "GaugeStore",
+                        "ui": "light"
+                    },
+                    "name": "MyGaugeChart1",
+                    "designerId": "9b03d431-2293-4cbd-b52c-186e71568572",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-gauge-chart",
+                    "autoName": "MyGaugeChart",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.series.Gauge",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "donut": 30,
+                                "field": "project",
+                                "needle": true
+                            },
+                            "name": "MyGaugeSeries1",
+                            "designerId": "5ccb483c-0797-46ab-9542-c2497106db3c"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.chart.PolarChart",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "colors": [
+                            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                        ],
+                        "designer|displayName": "GBudget",
+                        "designer|uiInterfaceName": "light",
+                        "dock": null,
+                        "layout|flex": 1,
+                        "store": "GaugeStore",
+                        "ui": "light"
+                    },
+                    "name": "MyGaugeChart2",
+                    "designerId": "7cfda199-d31e-44c1-9a54-e58417e80259",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-gauge-chart",
+                    "autoName": "MyGaugeChart",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.series.Gauge",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "donut": 30,
+                                "field": "budget",
+                                "needle": true,
+                                "needleWidth": 7
+                            },
+                            "name": "MyGaugeSeries2",
+                            "designerId": "11b6a961-da30-4c60-b233-303a5b97ef42"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": false,
+                "container|align": "stretchmax",
+                "designer|displayName": "OverviewTab",
+                "layout": "vbox",
+                "layout|flex": 2,
+                "title": "ภาพรวมความก้าวหน้ารายยุทธศาสตร์",
+                "titleAlign": "center"
+            },
+            "name": "MyPanel8",
+            "designerId": "5eb6389a-c4a6-492d-ae7c-1918b7e20c64",
+            "cn": [
+                {
+                    "type": "Ext.chart.CartesianChart",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "colors": [
+                            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                        ],
+                        "designer|displayName": "BOverView",
+                        "dock": "top",
+                        "height": 429,
+                        "layout|flex": -1,
+                        "margin": "5 5 5 5",
+                        "store": "BarCharOverViewStore"
+                    },
+                    "name": "MyBarChart",
+                    "designerId": "0a79e183-40f7-4a0f-8300-70a844e6d169",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-bar-chart",
+                    "autoName": "MyBarChart",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.axis.Category",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "name"
+                                ],
+                                "grid": true,
+                                "label": [
+                                    "{",
+                                    "rotate: {",
+                                    "degrees: -45",
+                                    "}",
+                                    "}"
+                                ],
+                                "title": [
+                                    "ยุทธศาสตร์"
+                                ]
+                            },
+                            "name": "MyCategoryAxis",
+                            "configAlternates": {
+                                "grid": "boolean"
+                            },
+                            "designerId": "46c0d6c4-9423-4506-88d4-02648c465d0b"
+                        },
+                        {
+                            "type": "Ext.chart.axis.Numeric",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "Current",
+                                    "progress"
+                                ],
+                                "grid": [
+                                    "{",
+                                    "    odd: {",
+                                    "        fill: '#e8e8e8'",
+                                    "    }",
+                                    "}"
+                                ],
+                                "label": null,
+                                "maximum": 100,
+                                "minimum": 0,
+                                "position": "left",
+                                "title": [
+                                    "ความก้าวหน้า %"
+                                ]
+                            },
+                            "name": "MyNumericAxis",
+                            "designerId": "4ec47d20-8452-44f1-896e-77226eb99368",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "label",
+                                            "layout",
+                                            "lastLabel"
+                                        ],
+                                        "fn": "renderer",
+                                        "implHandler": [
+                                            "                            return \tlabel+' %';"
+                                        ]
+                                    },
+                                    "name": "renderer",
+                                    "designerId": "189deab1-c59e-4b87-83f5-ca08a9feb88d"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.chart.series.Bar",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "stacked": false,
+                                "title": [
+                                    "ปุจจุบัน",
+                                    "คงเหลือ"
+                                ],
+                                "xField": "name",
+                                "yField": [
+                                    "Current",
+                                    "progress"
+                                ]
+                            },
+                            "name": "MyBarSeries",
+                            "designerId": "eb450978-18f7-40d4-8b49-5c2cc82fde7f"
+                        },
+                        {
+                            "type": "Ext.chart.interactions.PanZoom",
+                            "reference": {
+                                "name": "interactions",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyPanZoomInteraction",
+                            "designerId": "c2542c83-f5b4-4e54-9967-71dd770edc41"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

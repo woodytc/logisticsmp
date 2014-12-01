@@ -1,0 +1,78 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"id\": \"qui\",",
+            "        \"name\": \"consequatur\",",
+            "        \"current_progress\": 802.74,",
+            "        \"progress\": 644.11",
+            "    },",
+            "    {",
+            "        \"id\": \"quo\",",
+            "        \"name\": \"aperiam\",",
+            "        \"current_progress\": 815.9,",
+            "        \"progress\": 998.22",
+            "    },",
+            "    {",
+            "        \"id\": \"molestias\",",
+            "        \"name\": \"sint\",",
+            "        \"current_progress\": 552.61,",
+            "        \"progress\": 648.88",
+            "    },",
+            "    {",
+            "        \"id\": \"non\",",
+            "        \"name\": \"error\",",
+            "        \"current_progress\": 743.6,",
+            "        \"progress\": 282.76",
+            "    },",
+            "    {",
+            "        \"id\": \"ipsa\",",
+            "        \"name\": \"quia\",",
+            "        \"current_progress\": 260.7,",
+            "        \"progress\": 75.77",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "MyJsonStore",
+        "model": "GaugeModel",
+        "storeId": "Overview"
+    },
+    "name": "MyJsonStore",
+    "designerId": "fb8b6df2-17ab-4ab8-a8fa-1822da0f8b7b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyMemoryProxy",
+            "designerId": "124f27f9-c317-41d3-b2ff-93f9f39bb2cc",
+            "cn": [
+                {
+                    "type": "Ext.data.writer.Json",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "encode": true,
+                        "rootProperty": "items",
+                        "writeAllFields": true
+                    },
+                    "name": "MyJsonWriter",
+                    "designerId": "dec935bd-4ced-47bd-9944-30086bb1e184"
+                }
+            ]
+        }
+    ]
+}

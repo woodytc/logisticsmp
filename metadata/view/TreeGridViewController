@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "treegrid",
+        "designer|userClassName": "TreeGridViewController"
+    },
+    "designerId": "5a68861e-8c6b-48f0-ad18-258f0ae6320e"
+}

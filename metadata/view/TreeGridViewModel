@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "treegrid",
+        "designer|userClassName": "TreeGridViewModel"
+    },
+    "designerId": "4dcf69e1-0b08-49e1-a97d-37561c1ec1ee"
+}

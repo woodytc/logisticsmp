@@ -1,0 +1,55 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "strategicmodel",
+        "designer|userClassName": "StrategicModel"
+    },
+    "name": "MyModel1",
+    "designerId": "fc9d6d59-f7b1-4e75-89d9-520334da20d6",
+    "cn": [
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyInteger7",
+            "designerId": "c4330c02-3d58-4be0-a170-3484b7f69fde"
+        },
+        {
+            "type": "Ext.data.field.String",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyString3",
+            "designerId": "0631de39-4dfe-4b5a-9f38-50766bb3c0cd"
+        },
+        {
+            "type": "Ext.data.field.Integer",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "year"
+            },
+            "name": "MyInteger8",
+            "designerId": "4465ab42-8e09-4677-830b-7bf78b87b5ec"
+        }
+    ]
+}

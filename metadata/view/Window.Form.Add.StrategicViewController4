@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "windowformaddactivity",
+        "designer|userClassName": "Window.Form.Add.StrategicViewController4"
+    },
+    "name": "Window.Form.Add.StrategicViewController4",
+    "designerId": "870877c8-1ae8-46ff-a10f-fa043090b886"
+}

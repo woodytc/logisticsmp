@@ -1,0 +1,154 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "datamaintabdata",
+        "designer|userClassName": "Data.MainTabData",
+        "height": 250,
+        "layout": "fit",
+        "minWidth": 750,
+        "title": "Data Manament",
+        "width": "100%"
+    },
+    "name": "MyPanel1",
+    "designerId": "c8da215c-d038-49f9-8913-7cdbd191887b",
+    "viewControllerInstanceId": "4b014105-38a4-4315-8745-f20b326fe7cc",
+    "viewModelInstanceId": "6c8674c3-0abe-4213-b935-0e595931bafd",
+    "cn": [
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "activeTab": 0,
+                "height": 1280
+            },
+            "name": "MyTabPanel",
+            "designerId": "9549b0e7-1e63-4b7c-9cdd-2f7745fc248f",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "data.projecttab1",
+                    "designerId": "51b7885a-4c81-4f81-ab30-9379edbfbdce",
+                    "masterInstanceId": "123da2a0-22ee-40e2-a01d-fd694c042ee2",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig4",
+                            "designerId": "fa129305-227b-4023-8ff5-f6541807b1a0"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "data.projecttab2",
+                    "designerId": "32f2e962-bf9e-4e72-9430-8b50a9e570c5",
+                    "masterInstanceId": "d8409d47-991d-4eef-ab7b-6e1b063a0cdd",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig5",
+                            "designerId": "a615193f-ed4c-44f2-a796-e5f0bdb5f4ae"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "data.projecttab3",
+                    "designerId": "09edb9cc-cd00-46ad-8556-c7c1751155c9",
+                    "masterInstanceId": "84c069ea-cc8b-462d-8c26-cb1ae39abcd8",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig7",
+                            "designerId": "fbda28df-6400-45f5-a444-97789735f4a9"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "data.projecttab4",
+                    "designerId": "09d21f86-4e1d-4856-88b7-fb509f969c89",
+                    "masterInstanceId": "7588369c-1cc2-405e-a051-4266ca2a0120",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig6",
+                            "designerId": "de0a7710-7a97-4253-9e7f-a202ed56d566"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "data.projecttab5",
+                    "designerId": "3649895d-e6f2-4f47-9d02-bc467970756d",
+                    "masterInstanceId": "2b1e5a95-580c-4c4b-b5da-ce10d7f8a193",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "name": "TabConfig8",
+                            "designerId": "fdca15a8-fb69-4af3-b0ba-9a63366e81f8"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "GaugeModel"
+    },
+    "name": "MyModel",
+    "designerId": "6964c3b0-bf8c-401a-a699-753babb2693e",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField",
+            "designerId": "5ea393dc-a5e5-4933-b6e1-4ef96ffc5e49"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "overview"
+            },
+            "name": "MyField1",
+            "designerId": "822a1fd2-ca0e-4d52-bf5d-a61ef581cee1"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "project"
+            },
+            "name": "MyField2",
+            "designerId": "9b142b09-e863-4e66-91d8-29fe75f02e9b"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "budget"
+            },
+            "name": "MyField3",
+            "designerId": "8aed85bb-e0b8-4a4f-8315-e618057a1886"
+        }
+    ]
+}

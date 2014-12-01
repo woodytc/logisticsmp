@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dataprojecttab3",
+        "designer|userClassName": "Data.ProjectTab3ViewModel"
+    },
+    "designerId": "9c602680-507c-41f0-af40-1181dfd0719a"
+}

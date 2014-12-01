@@ -1,0 +1,82 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"id\": 732,",
+            "        \"year\": 1970",
+            "    },",
+            "    {",
+            "        \"id\": 875,",
+            "        \"year\": 1997",
+            "    },",
+            "    {",
+            "        \"id\": 769,",
+            "        \"year\": 1997",
+            "    },",
+            "    {",
+            "        \"id\": 37,",
+            "        \"year\": 1999",
+            "    },",
+            "    {",
+            "        \"id\": 382,",
+            "        \"year\": 1992",
+            "    },",
+            "    {",
+            "        \"id\": 760,",
+            "        \"year\": 1977",
+            "    },",
+            "    {",
+            "        \"id\": 367,",
+            "        \"year\": 1989",
+            "    },",
+            "    {",
+            "        \"id\": 823,",
+            "        \"year\": 2007",
+            "    },",
+            "    {",
+            "        \"id\": 463,",
+            "        \"year\": 1972",
+            "    },",
+            "    {",
+            "        \"id\": 650,",
+            "        \"year\": 1997",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "YearArrayStore",
+        "model": "YearModel",
+        "storeId": "YearArrayStore"
+    },
+    "designerId": "c8ef2818-9aa9-4ab6-a2c1-4f5b3da2c4f6",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyMemoryProxy",
+            "designerId": "9fead807-6dc1-4a25-bda6-483e2d2a63ff",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Array",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyArrayReader",
+                    "designerId": "2e7672c1-eb8b-4b69-9894-bbc51a65c38d"
+                }
+            ]
+        }
+    ]
+}

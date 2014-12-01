@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "logisticoverview",
+        "designer|userClassName": "Logistic.OverviewViewModel"
+    },
+    "designerId": "cb70bc9c-6fd8-4e0b-a13a-87b5f7d20751"
+}

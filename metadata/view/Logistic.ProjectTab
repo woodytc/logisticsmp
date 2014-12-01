@@ -1,0 +1,231 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "anchorSize": [
+            "'100% 20%'"
+        ],
+        "container|align": "stretch",
+        "designer|userAlias": "logisticprojecttab",
+        "designer|userClassName": "Logistic.ProjectTab",
+        "itemId": "contentPanel3",
+        "layout": "vbox",
+        "title": "Project",
+        "titleAlign": "center"
+    },
+    "name": "StstrategicTab1",
+    "configAlternates": {
+        "anchorSize": "object"
+    },
+    "designerId": "c466407f-808a-4031-83e8-981185d47783",
+    "viewControllerInstanceId": "36c8cab5-dbb3-415e-a86b-0ef1f5e6ca46",
+    "viewModelInstanceId": "1ea487ca-83ad-442e-879e-f9a6a53891ad",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "anchor": "100% 50%",
+                "anchorSize": null,
+                "collapseFirst": false,
+                "collapsible": false,
+                "container|align": "stretchmax",
+                "container|pack": "center",
+                "dock": null,
+                "height": 73,
+                "layout": "hbox",
+                "layout|flex": null,
+                "layout|margins": "0 10 10 0",
+                "minHeight": null,
+                "title": "Statrategic Form",
+                "titleAlign": "center"
+            },
+            "name": "MyForm",
+            "designerId": "8d4da549-e516-4b3a-94f5-ad9ee0fa44dc",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "anchor",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "name",
+                        "fieldLabel": "Plz-Ststrategic",
+                        "labelAlign": "right",
+                        "layout|flex": 1,
+                        "margin": "5 250 5 250",
+                        "store": "StstrategicStore",
+                        "valueField": "id"
+                    },
+                    "name": "MyComboBox",
+                    "designerId": "e6fafe47-7e4a-42cb-a17c-b9ad7ef97f0f",
+                    "cn": [
+                        {
+                            "type": "viewcontrollereventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onComboboxSelect",
+                                "implHandler": [
+                                    "console.log(records);"
+                                ],
+                                "name": "select",
+                                "scope": "me"
+                            },
+                            "name": "onComboboxSelect",
+                            "designerId": "bd8f5d09-67c7-4e84-9e1a-e41e6ccc635a"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsible": false,
+                "container|align": "stretchmax",
+                "designer|displayName": "BarChartStstrategicOverview",
+                "layout": "vbox",
+                "layout|flex": -1,
+                "title": "Bar-chart-Ststrategic-Overview",
+                "titleAlign": "center"
+            },
+            "name": "MyPanel8",
+            "designerId": "4be39c6a-f33c-42d5-8e9d-5560d52c80c8",
+            "cn": [
+                {
+                    "type": "Ext.chart.CartesianChart",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "colors": [
+                            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                        ],
+                        "dock": "top",
+                        "layout|flex": -1,
+                        "maxWidth": null,
+                        "minHeight": 500,
+                        "minWidth": 500,
+                        "store": "ProjectStore",
+                        "width": "100%"
+                    },
+                    "name": "MyLineChart",
+                    "designerId": "947f60ec-1add-4766-ad8a-0ef26f121b79",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-line-chart",
+                    "autoName": "MyLineChart",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.axis.Category",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "name"
+                                ],
+                                "grid": true,
+                                "label": [
+                                    "{",
+                                    "                    rotate: {",
+                                    "                        degrees: -45",
+                                    "                    }",
+                                    "                }"
+                                ],
+                                "title": null
+                            },
+                            "name": "MyCategoryAxis3",
+                            "configAlternates": {
+                                "grid": "boolean"
+                            },
+                            "designerId": "b209158b-7c47-43b4-9b9d-7e4b5b3dda08"
+                        },
+                        {
+                            "type": "Ext.chart.axis.Numeric",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fields": [
+                                    "progress"
+                                ],
+                                "grid": true,
+                                "position": "left",
+                                "title": null
+                            },
+                            "name": "MyNumericAxis3",
+                            "configAlternates": {
+                                "grid": "boolean"
+                            },
+                            "designerId": "837feb31-91ca-425d-bb91-837612690185"
+                        },
+                        {
+                            "type": "Ext.chart.series.Line",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "marker": [
+                                    "{",
+                                    "                    type: 'arrow'",
+                                    "                    ",
+                                    "                }"
+                                ],
+                                "xField": "name",
+                                "yField": [
+                                    "progress"
+                                ]
+                            },
+                            "name": "MyLineSeries",
+                            "designerId": "37f8b26f-2d16-4848-a25d-75ca97bcc020"
+                        },
+                        {
+                            "type": "Ext.chart.interactions.PanZoom",
+                            "reference": {
+                                "name": "interactions",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MyPanZoomInteraction3",
+                            "designerId": "c52ece01-5189-4115-84c2-70ac84524cb9"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "StstrategicModel"
+    },
+    "name": "ProjectModel1",
+    "designerId": "8a900aff-f964-4190-9748-dde05d41482f",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField8",
+            "designerId": "6758afca-f2df-4658-a588-5824c30cec0e"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "year"
+            },
+            "name": "MyField9",
+            "designerId": "f65b187e-65ec-4c6d-abc0-ba439160602f"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name"
+            },
+            "name": "MyField10",
+            "designerId": "7589c603-cf5e-463e-be59-ef4f887d75ca"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "current"
+            },
+            "name": "MyField12",
+            "designerId": "40727e68-6c83-4838-8e3d-7c5e2e3d9aeb"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "budget"
+            },
+            "name": "MyField13",
+            "designerId": "76292743-cca2-4cde-848a-2a544e0bd2f9"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "strategicmodels",
+        "designer|userClassName": "StrategicModelsViewModel"
+    },
+    "designerId": "593f7a14-f6f9-4b09-ae62-bac6dd1cbbf7",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[{\"id\":143,\"name\":\"aut\",\"year\":1980},{\"id\":421,\"name\":\"quia\",\"year\":1974},{\"id\":518,\"name\":\"quis\",\"year\":2008},{\"id\":415,\"name\":\"officia\",\"year\":1986},{\"id\":726,\"name\":\"aperiam\",\"year\":1986},{\"id\":541,\"name\":\"et\",\"year\":1985},{\"id\":6,\"name\":\"in\",\"year\":1986},{\"id\":785,\"name\":\"ut\",\"year\":1983},{\"id\":803,\"name\":\"voluptate\",\"year\":2005},{\"id\":831,\"name\":\"adipisci\",\"year\":2013},{\"id\":789,\"name\":\"qui\",\"year\":1998},{\"id\":109,\"name\":\"consequuntur\",\"year\":2007},{\"id\":647,\"name\":\"error\",\"year\":2004},{\"id\":863,\"name\":\"quia\",\"year\":2007},{\"id\":743,\"name\":\"itaque\",\"year\":1999},{\"id\":337,\"name\":\"explicabo\",\"year\":1970},{\"id\":292,\"name\":\"velit\",\"year\":1982},{\"id\":510,\"name\":\"tempore\",\"year\":1974},{\"id\":516,\"name\":\"officiis\",\"year\":1989},{\"id\":371,\"name\":\"molestias\",\"year\":1985},{\"id\":396,\"name\":\"autem\",\"year\":2010},{\"id\":58,\"name\":\"sunt\",\"year\":1989},{\"id\":238,\"name\":\"est\",\"year\":1987},{\"id\":571,\"name\":\"modi\",\"year\":1983},{\"id\":981,\"name\":\"recusandae\",\"year\":1992},{\"id\":688,\"name\":\"dolor\",\"year\":1976},{\"id\":37,\"name\":\"molestiae\",\"year\":1971},{\"id\":442,\"name\":\"tempore\",\"year\":2010},{\"id\":847,\"name\":\"natus\",\"year\":2003},{\"id\":635,\"name\":\"sit\",\"year\":2005}]"
+                ],
+                "model": "StrategicModel",
+                "name": "strategicModels"
+            },
+            "name": "strategicModels",
+            "designerId": "5bcdeff8-90b9-4eeb-bde1-6244b8c3bfef",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Memory",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyMemoryProxy5",
+                    "designerId": "c4a8e6f9-584e-425d-903d-1585ad9495f5"
+                }
+            ]
+        }
+    ]
+}
