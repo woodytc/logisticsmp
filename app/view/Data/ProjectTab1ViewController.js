@@ -36,6 +36,7 @@ Ext.define('LogisticSMP.view.Data.ProjectTab1ViewController', {
 
             record :record,
             intend:'',
+            mode:'add',
             listeners: {
                 close: function (panel, eOpts) {
                     console.log(panel);
@@ -61,12 +62,13 @@ Ext.define('LogisticSMP.view.Data.ProjectTab1ViewController', {
 
             record :record,
             intend:'',
+            mode:'edit',
             listeners: {
                 close: function (panel, eOpts) {
                     console.log(panel);
                     console.log(panel.intend);
                     if (panel.intend === 'save-success') {
-                        console.log('insave success');
+                        console.log('edit success');
                         //me.search(window.gridSizesData,me.username);
                     }
                 }
@@ -80,9 +82,33 @@ Ext.define('LogisticSMP.view.Data.ProjectTab1ViewController', {
 
     onButtonDeleteClick: function(button, e, eOpts) {
         var record = this.getView().getComponent('grid-strategic').getSelectionModel().getSelection()[0];
-
+        
         Ext.MessageBox.confirm('Confirm', 'Are you sure you want to do that?', this.deleteComfrim(record), this);
 
+    },
+    deleteComfrim:function(record){
+    	console.log(record);
+    	Ext.Ajax.request({
+  		  url : 'manage_strategic.php?type=delete',
+  		  method: 'POST',
+  		  //yearheaders: { 'Content-Type': 'application/json' },                     
+  		  params : { 
+  			  id : record.data.id
+  		  },
+  		  success: function (response) {
+  			  console.log(response);
+  		      var jsonResp = Ext.util.JSON.decode(response.responseText);
+  		      Ext.Msg.alert("Info","UserName from Server : "+jsonResp.username);
+  		  },
+  		  failure: function (response) {
+  			  console.log(response);
+  			  var jsonResp = Ext.util.JSON.decode(response.responseText);
+  		      Ext.Msg.alert("Error",jsonResp.error);
+  		  }
+  		});
+    	
     }
+    
+    
 
 });

@@ -25,7 +25,7 @@ Ext.define('LogisticSMP.store.StrategicModel', {
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({
-            //storeId: 'MyJsonStore1',
+        	groupField: 'year',
         	model: 'LogisticSMP.model.StrategicModel',
             autoLoad: true,
             proxy: {

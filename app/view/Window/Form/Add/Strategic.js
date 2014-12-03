@@ -30,7 +30,7 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Strategic', {
     viewModel: {
         type: 'windowformaddstrategic'
     },
-    height: 252,
+    height: 300,
     resizable: false,
     width: 616,
     title: 'จัดการกลยุทธ',
@@ -55,13 +55,13 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Strategic', {
                     valueField: 'id'
                 },
                 {
-                    xtype: 'textfield',
-                    anchor: '100%',
-                    height: 130,
+                    xtype: 'numberfield',
                     id: 'strategic-seq',
+                    anchor: '100%',
                     fieldLabel: 'Seq',
                     labelAlign: 'right',
-                    name: 'seq'
+                    name: 'seq',
+                    minValue: 1
                 },
                 {
                     xtype: 'textareafield',
@@ -94,6 +94,8 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Strategic', {
     onLoad: function(record) {
         console.log(record);
         Ext.getCmp('strategic-name').setValue(record.data.name);
+        Ext.getCmp('strategic-seq').setValue(record.data.seq);
+        Ext.getCmp('strategic-year').setValue(record.data.year);
     }
 
 });

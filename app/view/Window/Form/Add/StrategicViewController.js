@@ -21,42 +21,71 @@ Ext.define('LogisticSMP.view.Window.Form.Add.StrategicViewController', {
         me = this;
         var view = this.getView();
         var form = view.getComponent('form1').getForm();
-        var record = me.record;
+        var record = view.record;
+        var mode = view.mode;
+        var url = "";
         console.log(record);
 
-        console.log(view.intend);
+        console.log(view.mode);
         view.intend = "save-success";
 
+        
         // Valid
         console.log(form.isValid());
         if (form.isValid()) {
         	var year = Ext.getCmp('strategic-year').getValue();
         	var name = Ext.getCmp('strategic-name').getValue();
+        	var seq = Ext.getCmp('strategic-seq').getValue();
         	var data = {
-        			'year':year,
+					'seq':parseInt(seq,10),
+        			'year':parseInt(year,10),
         			'name':name
         	};
         	console.log(Ext.encode(data));
+        	if(mode === 'add'){
+        		Ext.Ajax.request({
+          		  url : 'manage_strategic.php?type=add',
+          		  method: 'POST',
+          		  params : { 
+          			  seq: parseInt(seq,10),
+          			  year : parseInt(year,10),
+          			  name: name
+          		  },
+          		  success: function (response) {
+          			  console.log(response);
+          		      var jsonResp = Ext.util.JSON.decode(response.responseText);
+          		      Ext.Msg.alert("Info","UserName from Server : "+jsonResp.username);
+          		  },
+          		  failure: function (response) {
+          			  console.log(response);
+          			  var jsonResp = Ext.util.JSON.decode(response.responseText);
+          		      Ext.Msg.alert("Error",jsonResp.error);
+          		  }
+          		});
+        	}else if(mode === 'edit'){
+        		console.log("in mode edit");
+        		Ext.Ajax.request({
+          		  url : 'manage_strategic.php?type=edit',
+          		  method: 'POST',
+          		  params : { 
+          			  id: parseInt(record.data.id,10),
+          			  seq: parseInt(seq,10),
+          			  year : parseInt(year,10),
+          			  name: name
+          		  },
+          		  success: function (response) {
+          			  console.log(response);
+          		      var jsonResp = Ext.util.JSON.decode(response.responseText);
+          		      Ext.Msg.alert("Info","UserName from Server : "+jsonResp.username);
+          		  },
+          		  failure: function (response) {
+          			  console.log(response);
+          			  var jsonResp = Ext.util.JSON.decode(response.responseText);
+          		      Ext.Msg.alert("Error",jsonResp.error);
+          		  }
+          		});
+        	}
         	
-        	Ext.Ajax.request({
-        		  url : 'manage_strategic.php?type=add',
-        		  method: 'POST',
-        		  //yearheaders: { 'Content-Type': 'application/json' },                     
-        		  params : { 
-        			  year : parseInt(year,10),
-        			  name: name
-        		  },
-        		  success: function (response) {
-        			  console.log(response);
-        		      var jsonResp = Ext.util.JSON.decode(response.responseText);
-        		      Ext.Msg.alert("Info","UserName from Server : "+jsonResp.username);
-        		  },
-        		  failure: function (response) {
-        			  console.log(response);
-        			  var jsonResp = Ext.util.JSON.decode(response.responseText);
-        		      Ext.Msg.alert("Error",jsonResp.error);
-        		  }
-        		});
            
 
 

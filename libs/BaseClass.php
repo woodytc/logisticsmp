@@ -49,6 +49,7 @@ class BaseClass {
     public function insert($post) {
         unset($post['id']);
         $result = PDOAdpter::getInstance()->insert($post, $this->table, TRUE);
+        return $result;
     }
 
     public function update($post) {
@@ -84,13 +85,13 @@ class BaseClass {
         $sms = '';
         
         if($type === 'add'){
-            $sms = "เพิ่มข้อมูลเรียบร้อย";
+            $sms = "à¹€à¸žà¸´à¹ˆà¸¡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¹€à¸£à¸µà¸¢à¸šà¸£à¹‰à¸­à¸¢";
         }  elseif ($type ==='edit') {
-           $sms = "ปรับปรุงข้อมูลเรียบร้อย"; 
+           $sms = "à¸›à¸£à¸±à¸šà¸›à¸£à¸¸à¸‡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¹€à¸£à¸µà¸¢à¸šà¸£à¹‰à¸­à¸¢"; 
         } elseif ($type ==='del') {
-            $sms = "ลบข้อมูลเรียบร้อย"; 
+            $sms = "à¸¥à¸šà¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¹€à¸£à¸µà¸¢à¸šà¸£à¹‰à¸­à¸¢"; 
         }else{
-             $sms ="กรุณาติดต่อเจ้าหน้าที่";
+             $sms ="à¸�à¸£à¸¸à¸“à¸²à¸•à¸´à¸”à¸•à¹ˆà¸­à¹€à¸ˆà¹‰à¸²à¸«à¸™à¹‰à¸²à¸—à¸µà¹ˆ";
         }
         return $sms;
     }
