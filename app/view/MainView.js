@@ -50,7 +50,7 @@ Ext.define('LogisticSMP.view.MainView', {
             region: 'center',
             itemId: 'contentPanel4',
             anchorSize: '100% 20%',
-            title: 'Content',
+           // title: 'Content',
             activeTab: 0,
             items: [
 //                {

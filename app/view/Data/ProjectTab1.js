@@ -119,6 +119,8 @@ Ext.define('LogisticSMP.view.Data.ProjectTab1', {
             dockedItems: [
                 {
                     xtype: 'pagingtoolbar',
+                    id:'pagingtoolbar-strategic',
+                    store:'StrategicModel',
                     dock: 'bottom',
                     width: 360,
                     displayInfo: true

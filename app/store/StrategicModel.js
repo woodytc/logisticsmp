@@ -28,11 +28,14 @@ Ext.define('LogisticSMP.store.StrategicModel', {
         	groupField: 'year',
         	model: 'LogisticSMP.model.StrategicModel',
             autoLoad: true,
+            pageSize: 10,
             proxy: {
                 type: 'ajax',
                 url: 'manage_strategic.php?type=all',
                 reader: {
-                    type: 'json'
+                    type: 'json',
+                    rootProperty: 'items',
+					totalProperty:'total'
                 }
             }
         }, cfg)]);

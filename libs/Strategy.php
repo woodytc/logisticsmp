@@ -3,14 +3,14 @@
 require_once 'PDOAdapter.php';
 require_once 'BaseClass.php';
 
-class Strategic extends BaseClass{
+class Strategy extends BaseClass{
 
     function __construct() {
         /**
          * Get DB
          */
         parent::__construct();
-        $this->table ='strategic';
+        $this->table ='strategy';
         
     }
 

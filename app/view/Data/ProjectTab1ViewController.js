@@ -43,7 +43,7 @@ Ext.define('LogisticSMP.view.Data.ProjectTab1ViewController', {
                     console.log(panel.intend);
                     if (panel.intend === 'save-success') {
                         console.log('insave success');
-                        //me.search(window.gridSizesData,me.username);
+                        Ext.getCmp('pagingtoolbar-strategic').moveFirst();
                     }
                 }
             }
@@ -82,11 +82,9 @@ Ext.define('LogisticSMP.view.Data.ProjectTab1ViewController', {
 
     onButtonDeleteClick: function(button, e, eOpts) {
         var record = this.getView().getComponent('grid-strategic').getSelectionModel().getSelection()[0];
-        
-        Ext.MessageBox.confirm('Confirm', 'Are you sure you want to do that?', this.deleteComfrim(record), this);
-
+         Ext.MessageBox.confirm('Confirm', 'Confirm Delete?', this.onDeleteClick(button, e, eOpts), this);
     },
-    deleteComfrim:function(record){
+    onDeleteClick:function(button, e, eOpts){
     	console.log(record);
     	Ext.Ajax.request({
   		  url : 'manage_strategic.php?type=delete',
