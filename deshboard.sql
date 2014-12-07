@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Dec 04, 2014 at 05:59 AM
+-- Generation Time: Dec 08, 2014 at 05:52 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -45,21 +45,24 @@ CREATE TABLE `activity` (
 
 CREATE TABLE `project` (
   `id` int(11) NOT NULL auto_increment,
-  ` strategic_id` int(11) NOT NULL,
-  ` strategy_id` int(11) NOT NULL,
+  `strategic_id` int(11) NOT NULL,
+  `strategy_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `seq` float NOT NULL,
   `start_date` date NOT NULL,
   `end_date` date NOT NULL,
-  `progress` float NOT NULL,
-  `budget` float NOT NULL,
+  `progress` decimal(10,2) default NULL,
+  `budget` decimal(20,2) default NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 -- 
 -- Dumping data for table `project`
 -- 
 
+INSERT INTO `project` VALUES (2, 11, 5, 'jfxmekt', 125, '2014-12-01', '2014-12-31', 0.70, 7000000.00);
+INSERT INTO `project` VALUES (3, 13, 5, 'sfsdfsdf', 2, '2014-12-25', '2014-12-31', 0.80, 789456.00);
+INSERT INTO `project` VALUES (4, 1, 5, '12313', 125, '2014-12-01', '2014-12-16', 1.00, 8000000.00);
 
 -- --------------------------------------------------------
 
@@ -73,39 +76,35 @@ CREATE TABLE `strategic` (
   `name` varchar(255) NOT NULL,
   `seq` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 -- 
 -- Dumping data for table `strategic`
 -- 
 
-INSERT INTO `strategic` VALUES (1, 2014, 'Test ยุทธศาสตร์ 1', 1);
-INSERT INTO `strategic` VALUES (2, 2011, 'sdfsdfsdf', 3);
-INSERT INTO `strategic` VALUES (3, 2008, 'sdfds', 2);
-INSERT INTO `strategic` VALUES (4, 2008, 'sfsdf', 8);
-INSERT INTO `strategic` VALUES (5, 2013, 'sfsdf', 5);
-INSERT INTO `strategic` VALUES (6, 2007, 'xyz', 1);
-INSERT INTO `strategic` VALUES (7, 2006, 'TEstgsdtafasdf fasdfasdf', 2);
-INSERT INTO `strategic` VALUES (8, 2010, 'sdfsdf', 1);
-INSERT INTO `strategic` VALUES (9, 2015, 'tsetse', 0);
-INSERT INTO `strategic` VALUES (10, 2015, '152', 152);
-INSERT INTO `strategic` VALUES (11, 2015, 'tsetse', 3);
+INSERT INTO `strategic` VALUES (1, 2014, 'sfsdfsdf', 1);
+INSERT INTO `strategic` VALUES (5, 2013, 'ss', 5);
+INSERT INTO `strategic` VALUES (11, 2015, 'qqq', 3);
+INSERT INTO `strategic` VALUES (13, 2015, 'sfsdfsssssfsd', 4);
+INSERT INTO `strategic` VALUES (14, 2008, '13132', 15);
 
 -- --------------------------------------------------------
 
 -- 
--- Table structure for table ` strategy`
+-- Table structure for table `strategy`
 -- 
 
-CREATE TABLE ` strategy` (
+CREATE TABLE `strategy` (
   `id` int(11) NOT NULL auto_increment,
-  ` strategic_id` int(11) NOT NULL,
+  `strategic_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `seq` float NOT NULL,
+  `seq` int(11) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 -- 
--- Dumping data for table ` strategy`
+-- Dumping data for table `strategy`
 -- 
 
+INSERT INTO `strategy` VALUES (3, 1, '5555666', 2);
+INSERT INTO `strategy` VALUES (5, 13, 'sfsdfsdf', 2);
