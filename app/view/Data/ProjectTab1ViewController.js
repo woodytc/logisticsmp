@@ -14,99 +14,143 @@
  */
 
 Ext.define('LogisticSMP.view.Data.ProjectTab1ViewController', {
-    extend: 'Ext.app.ViewController',
-    alias: 'controller.dataprojecttab1',
+	extend : 'Ext.app.ViewController',
+	alias : 'controller.dataprojecttab1',
 
-    deleteConfirm: function(record) {
+	deleteConfirm : function(record) {
 
-    },
+	},
 
-    onButtonSerchClick: function(button, e, eOpts) {
-        //        this.getref
-    },
+	onButtonSerchClick : function(button, e, eOpts) {
+		// this.getref
+	},
 
-    /*
-        getSelection = getdata in row select
+	/*
+	 * getSelection = getdata in row select
+	 * 
+	 */
+	onButtonAddClick : function(button, e, eOpts) {
+		var record = this.getView().getComponent('grid-strategic')
+				.getSelectionModel().getSelection()[0];
 
-    */
-    onButtonAddClick: function(button, e, eOpts) {
-        var record = this.getView().getComponent('grid-strategic').getSelectionModel().getSelection()[0];
+		var popup = Ext.create('widget.windowformaddstrategic', {
 
-        var popup = Ext.create('widget.windowformaddstrategic',{
+			record : record,
+			intend : '',
+			mode : 'add',
+			listeners : {
+				close : function(panel, eOpts) {
+					console.log(panel);
+					console.log(panel.intend);
+					if (panel.intend === 'save-success') {
+						console.log('insave success');
+						Ext.getCmp('pagingtoolbar-strategic').moveFirst();
+					}
+				}
+			}
 
-            record :record,
-            intend:'',
-            mode:'add',
-            listeners: {
-                close: function (panel, eOpts) {
-                    console.log(panel);
-                    console.log(panel.intend);
-                    if (panel.intend === 'save-success') {
-                        console.log('insave success');
-                        Ext.getCmp('pagingtoolbar-strategic').moveFirst();
-                    }
-                }
-            }
+		});
+		// call frist load form to set value
+		// popup.onLoad(record);
+		popup.show();
 
-        });
-        //call frist load form to set value
-        //popup.onLoad(record);
-        popup.show();
+	},
 
-    },
+	onButtonEditClick : function(button, e, eOpts) {
 
-    onButtonEditClick: function(button, e, eOpts) {
-        var record = this.getView().getComponent('grid-strategic').getSelectionModel().getSelection()[0];
+		if (this.getView().getComponent('grid-strategic').getSelectionModel()
+				.getSelection().length) {
+			var record = this.getView().getComponent('grid-strategic')
+					.getSelectionModel().getSelection()[0];
 
-        var popup = Ext.create('widget.windowformaddstrategic',{
+			var popup = Ext.create('widget.windowformaddstrategic', {
 
-            record :record,
-            intend:'',
-            mode:'edit',
-            listeners: {
-                close: function (panel, eOpts) {
-                    console.log(panel);
-                    console.log(panel.intend);
-                    if (panel.intend === 'save-success') {
-                        console.log('edit success');
-                        //me.search(window.gridSizesData,me.username);
-                    }
-                }
-            }
+				record : record,
+				intend : 'go',
+				mode : 'edit',
+				listeners : {
+					close : function(panel, eOpts) {
+						console.log("in");
+						console.log(panel.intend);
+						Ext.getCmp('pagingtoolbar-strategic').moveFirst();
+						if (panel.intend === 'edit-success') {
+							console.log('edit success');
+							// Ext.getCmp('pagingtoolbar-strategic').moveFirst();
+						}
+					}
+				}
 
-        });
-        //call frist load form to set value
-        popup.onLoad(record);
-        popup.show();
-    },
+			});
+			// call frist load form to set value
+			popup.onLoad(record);
+			popup.show();
+		}//end if
+	},
 
-    onButtonDeleteClick: function(button, e, eOpts) {
-        var record = this.getView().getComponent('grid-strategic').getSelectionModel().getSelection()[0];
-         Ext.MessageBox.confirm('Confirm', 'Confirm Delete?', this.onDeleteClick(button, e, eOpts), this);
-    },
-    onDeleteClick:function(button, e, eOpts){
-    	console.log(record);
-    	Ext.Ajax.request({
-  		  url : 'manage_strategic.php?type=delete',
-  		  method: 'POST',
-  		  //yearheaders: { 'Content-Type': 'application/json' },                     
-  		  params : { 
-  			  id : record.data.id
-  		  },
-  		  success: function (response) {
-  			  console.log(response);
-  		      var jsonResp = Ext.util.JSON.decode(response.responseText);
-  		      Ext.Msg.alert("Info","UserName from Server : "+jsonResp.username);
-  		  },
-  		  failure: function (response) {
-  			  console.log(response);
-  			  var jsonResp = Ext.util.JSON.decode(response.responseText);
-  		      Ext.Msg.alert("Error",jsonResp.error);
-  		  }
-  		});
-    	
-    }
-    
-    
+	onButtonDeleteClick : function(button, e, eOpts) {
+
+		var record = this.getView().getComponent('grid-strategic')
+				.getSelectionModel().getSelection();
+
+		if (record.length) {
+			Ext.MessageBox.confirm('Confirm', 'คุณต้องการที่จะลบข้อมูล',
+					function(cbtn, bool) {
+						if (cbtn == 'yes') {
+							Ext.Ajax.request({
+								url : 'manage_strategic.php?type=delete',
+								method : 'POST',
+								params : {
+									id : record[0].data.id
+								},
+								success : function(response) {
+									console.log(response);
+									var jsonResp = Ext.util.JSON
+											.decode(response.responseText);
+									console.log(jsonResp);
+									if (jsonResp.status) {
+										Ext.Msg.alert("Info",
+												"ลบข้อมูลเรียบร้อยแล้ว");
+										Ext.getCmp('pagingtoolbar-strategic')
+												.moveFirst();
+									} else {
+										Ext.Msg.alert("Info",
+												"ไม่สามารถทำการลบข้อมูลได้");
+									}
+								},
+								failure : function(response) {
+									console.log(response);
+									var jsonResp = Ext.util.JSON
+											.decode(response.responseText);
+									Ext.Msg.alert("Error", jsonResp.error);
+								}
+							});
+						}
+
+					});
+		}
+	},
+	onDeleteClick : function(record, e, eOpts) {
+
+		Ext.Ajax.request({
+			url : 'manage_strategic.php?type=delete',
+			method : 'POST',
+			params : {
+				id : record.data.id
+			},
+			success : function(response) {
+				console.log(response);
+				var jsonResp = Ext.util.JSON.decode(response.responseText);
+				console.log(jsonResp);
+				Ext.Msg.alert("Info", "UserName from Server : "
+						+ jsonResp.username);
+			},
+			failure : function(response) {
+				console.log(response);
+				var jsonResp = Ext.util.JSON.decode(response.responseText);
+				Ext.Msg.alert("Error", jsonResp.error);
+			}
+		});
+
+	}
 
 });

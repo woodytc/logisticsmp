@@ -3,8 +3,8 @@
 class DBConfig {
 
    /** database name */
-   protected $_dbName = 'dashboard';
-
+   //protected $_dbName = 'dashboard';
+   protected $_dbName = 'deshboard';
    /** username */
    protected $_dbUser = 'root';
 

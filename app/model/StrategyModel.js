@@ -28,15 +28,19 @@ Ext.define('LogisticSMP.model.StrategyModel', {
         },
         {
             type: 'int',
-            name: 'strategic_id'
+            name:'strategic_id'
         },
         {
             type: 'string',
             name: 'name'
         },
         {
+        	type:'int',
+        	name:'seq'
+        },
+        {
             type: 'string',
-            name: 'strategy_name'
+            name: 'strategic_name'
         }
     ]
 });

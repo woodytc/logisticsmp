@@ -79,11 +79,12 @@ Ext.define('LogisticSMP.view.Data.ProjectTab2', {
     items: [
         {
             xtype: 'gridpanel',
+            id:'grid-strategy',
             flex: 4,
             autoScroll: true,
             height: 89,
             width: 1280,
-            title: 'รายการ ยุทธศาสตร์',
+            title: 'รายการ ยุทธศาสตร์ ',
             autoLoad: true,
             columnLines: true,
             enableColumnHide: false,
@@ -102,12 +103,17 @@ Ext.define('LogisticSMP.view.Data.ProjectTab2', {
                     xtype: 'gridcolumn',
                     hidden: true,
                     dataIndex: 'strategic_id',
-                    groupable: true,
                     text: 'strategic_id'
                 },
                 {
                     xtype: 'gridcolumn',
-                    dataIndex: 'strategy_name',
+                    dataIndex: 'seq',
+                    text: 'seq'
+                },
+                {
+                    xtype: 'gridcolumn',
+                    dataIndex: 'strategic_name',
+                    groupable: true,
                     text: 'strategic_name'
                 },
                 {
@@ -124,6 +130,8 @@ Ext.define('LogisticSMP.view.Data.ProjectTab2', {
                 {
                     xtype: 'pagingtoolbar',
                     dock: 'bottom',
+                    id:'pagingtoolbar-strategy',
+                    store:'StrategyModel',
                     width: 360,
                     displayInfo: true
                 },

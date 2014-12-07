@@ -51,7 +51,6 @@ Ext.application({
         'StstrategicTab',
         'ProjectTab',
         'Data.MainTabData',
-        'Strategic2',
         'Data.ProjectTab1',
         'Data.ProjectTab2',
         'Data.ProjectTab4',

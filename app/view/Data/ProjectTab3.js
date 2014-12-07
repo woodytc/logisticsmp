@@ -14,154 +14,177 @@
  */
 
 Ext.define('LogisticSMP.view.Data.ProjectTab3', {
-    extend: 'Ext.panel.Panel',
-    alias: 'widget.dataprojecttab3',
+	extend : 'Ext.panel.Panel',
+	alias : 'widget.dataprojecttab3',
 
-    requires: [
-        'LogisticSMP.view.Data.ProjectTab3ViewModel',
-        'LogisticSMP.view.Data.ProjectTab3ViewController',
-        'Ext.form.Panel',
-        'Ext.form.field.Text',
-        'Ext.button.Button',
-        'Ext.grid.Panel',
-        'Ext.grid.feature.Grouping',
-        'Ext.XTemplate',
-        'Ext.grid.column.RowNumberer',
-        'Ext.grid.View',
-        'Ext.selection.RowModel',
-        'Ext.toolbar.Paging'
-    ],
+	requires : [ 'LogisticSMP.view.Data.ProjectTab3ViewModel',
+			'LogisticSMP.view.Data.ProjectTab3ViewController',
+			'Ext.form.Panel',
+	        'Ext.form.field.Text',
+	        'Ext.button.Button',
+	        'Ext.grid.Panel',
+	        'Ext.grid.column.RowNumberer',
+	        'Ext.grid.View',
+	        'Ext.selection.RowModel',
+	        'Ext.toolbar.Paging',
+	        'Ext.grid.feature.Grouping',
+	        'Ext.XTemplate' ],
 
-    controller: 'dataprojecttab3',
-    viewModel: {
-        type: 'dataprojecttab3'
-    },
-    height: 10280,
-    itemId: 'contentPanel5',
-    anchorSize: '100% 20%',
-    title: 'บริหารจัดการ โปรเจค',
-    titleAlign: 'center',
+	controller : 'dataprojecttab3',
+	viewModel : {
+		type : 'dataprojecttab3'
+	},
+	height : 10280,
+	itemId : 'contentPanel5',
+	anchorSize : '100% 20%',
+	title : 'บริหารจัดการ โปรเจค',
+	titleAlign : 'center',
 
-    layout: {
-        type: 'vbox',
-        align: 'stretch'
-    },
-    items: [
-        {
-            xtype: 'form',
-            width: '100%',
-            bodyPadding: 10,
-            title: 'ค้นหา',
-            layout: {
-                type: 'hbox',
-                align: 'stretch'
-            },
-            items: [
-                {
-                    xtype: 'textfield',
-                    margin: '0 15 0 150 ',
-                    fieldLabel: 'Label'
-                },
-                {
-                    xtype: 'button',
-                    margin: '0 25 0 0',
-                    text: 'Search',
-                    listeners: {
-                        click: 'onButtonSerchClick11'
-                    }
-                }
-            ]
+	layout : {
+		type : 'vbox',
+		align : 'stretch'
+	},
+	dockedItems : [ {
+		xtype : 'form',
+		flex : 1,
+		dock : 'top',
+		bodyPadding : 10,
+		title : 'ค้นหา',
+		layout : {
+			type : 'hbox',
+			align : 'stretch'
+		},
+		items : [ {
+			xtype : 'textfield',
+			margin : '5 10 5 150',
+			width : 300,
+			fieldLabel : 'Label',
+			labelAlign : 'right'
+		}, {
+			xtype : 'button',
+			margin : '5 0 5 0',
+			text : 'Search',
+			listeners : {
+				click : 'onButtonSerchClick1'
+			}
+		} ]
+	} ],
+	items : [ {
+		 xtype: 'gridpanel',
+         id:'grid-project',
+         flex: 4,
+         autoScroll: true,
+         height: 89,
+         width: 1280,
+         title: 'รายการ ยุทธศาสตร์ ',
+         autoLoad: true,
+         columnLines: true,
+         enableColumnHide: false,
+         store: 'ProjectModels',
+		columns : [ {
+			xtype : 'rownumberer'
+		}, {
+			xtype : 'gridcolumn',
+			hidden : true,
+			dataIndex : 'id',
+			text : 'ID'
+		}, {
+			xtype : 'gridcolumn',
+			hidden : true,
+			dataIndex : 'strategic_id',
+			text : 'strategic_id'
+		}, {
+			xtype : 'gridcolumn',
+			hidden : true,
+			dataIndex : 'strategy_id',
+			text : 'strategy_id'
+		}, 
+		{
+			xtype : 'gridcolumn',
+			dataIndex : 'seq',
+			text : 'seq'
+		}, {
+			xtype : 'gridcolumn',
+			dataIndex : 'strategic_name',
+			groupable : true,
+			text : 'strategic_name',
+			flex : -1
+		},{
+			xtype : 'gridcolumn',
+			dataIndex : 'strategy_name',
+			groupable : true,
+			text : 'strategy_name',
+			flex : -1
+		}, {
+			xtype : 'gridcolumn',
+			dataIndex : 'name',
+			text : 'name',
+			flex : -1
+		},{
+			xtype : 'gridcolumn',
+			dataIndex : 'start_date',
+			text : 'start_date'
+		},{
+			xtype : 'gridcolumn',
+			dataIndex : 'end_date',
+			text : 'end_date'
+		},
+		{
+            text     : 'Progress',
+            xtype    : 'widgetcolumn',
+            width    : 120,
+            dataIndex: 'progress',
+            widget: {
+                xtype: 'progressbarwidget',
+                textTpl: [
+                    '{percent:number("0")}% done'
+                ]
+            }
         },
-        {
-            xtype: 'gridpanel',
-            autoScroll: true,
-            height: 89,
-            width: 1280,
-            title: 'รายการ โปรเจค',
-            autoLoad: true,
-            columnLines: true,
-            store: 'ProjectModels',
-            features: [
-                {
-                    ftype: 'grouping',
-                    groupHeaderTpl: [
-                        '{columnName}: {name}'
-                    ],
-                    startCollapsed: true
-                }
-            ],
-            columns: [
-                {
-                    xtype: 'rownumberer'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    hidden: true,
-                    dataIndex: 'id',
-                    text: 'ID'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    width: 100,
-                    dataIndex: 'strategy_name',
-                    text: 'strategy_name'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'name',
-                    text: 'name',
-                    flex: -1
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'progress',
-                    text: 'progress'
-                },
-                {
-                    xtype: 'gridcolumn',
-                    dataIndex: 'budget',
-                    text: 'budget'
-                }
-            ],
-            selModel: {
-                selType: 'rowmodel'
-            },
-            dockedItems: [
-                {
-                    xtype: 'pagingtoolbar',
-                    dock: 'bottom',
-                    width: 360,
-                    displayInfo: true
-                },
-                {
-                    xtype: 'toolbar',
-                    dock: 'top',
-                    items: [
-                        {
-                            xtype: 'button',
-                            text: 'Add',
-                            listeners: {
-                                click: 'onButtonAddClick11'
-                            }
-                        },
-                        {
-                            xtype: 'button',
-                            text: 'Edit',
-                            listeners: {
-                                click: 'onButtonEditClick11'
-                            }
-                        },
-                        {
-                            xtype: 'button',
-                            text: 'Delete',
-                            listeners: {
-                                click: 'onButtonDeleteClick11'
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+		{
+			xtype : 'gridcolumn',
+			dataIndex : 'budget',
+			text : 'budget'
+		}
+		],
+		selModel : {
+			selType : 'rowmodel'
+		},
+		dockedItems : [ {
+			xtype : 'pagingtoolbar',
+			dock : 'bottom',
+			id : 'pagingtoolbar-project',
+			store : 'ProjectModels',
+			width : 360,
+			displayInfo : true
+		}, {
+			xtype : 'toolbar',
+			dock : 'top',
+			items : [ {
+				xtype : 'button',
+				text : 'Add',
+				listeners : {
+					click : 'onButtonAddProjectClick'
+				}
+			}, {
+				xtype : 'button',
+				text : 'Edit',
+				listeners : {
+					click : 'onButtonEditProjectClick'
+				}
+			}, {
+				xtype : 'button',
+				text : 'Delete',
+				listeners : {
+					click : 'onButtonDeleteProjectClick'
+				}
+			} ]
+		} ],
+		features : [ {
+			ftype : 'grouping',
+			groupHeaderTpl : [ '{columnName}: {name}' ],
+			startCollapsed : false
+		} ]
+	} ]
 
 });

@@ -59,7 +59,7 @@ class BaseClass {
     }
 
     public function delete($id) {
-        PDOAdpter::getInstance()->deleteQuick(array('id' => $id), $this->table, FALSE);
+        return  PDOAdpter::getInstance()->deleteQuick(array('id' => $id), $this->table, FALSE);
     }
 
     public function selectByid($id) {

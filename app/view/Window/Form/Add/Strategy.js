@@ -18,8 +18,8 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Strategy', {
     alias: 'widget.windowformaddstrategy',
 
     requires: [
-        'LogisticSMP.view.Window.Form.Add.StrategicViewModel1',
-        'LogisticSMP.view.Window.Form.Add.StrategicViewController1',
+        'LogisticSMP.view.Window.Form.Add.StrategyViewModel',
+        'LogisticSMP.view.Window.Form.Add.StrategyViewController',
         'Ext.form.Panel',
         'Ext.form.field.ComboBox',
         'Ext.XTemplate',
@@ -31,28 +31,41 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Strategy', {
     viewModel: {
         type: 'windowformaddstrategy'
     },
-    height: 252,
-    resizable: false,
+    height: 275,
+    resizable: true,
     width: 616,
     title: 'จัดการกลยุทธ',
 
     items: [
         {
             xtype: 'form',
-            id: 'form2',
+            id: 'form1',
             bodyPadding: 10,
             items: [
                 {
                     xtype: 'combobox',
                     anchor: '100%',
+                    id:'strategic-id',
                     fieldLabel: 'Strategic',
                     labelAlign: 'right',
                     displayField: 'name',
-                    displayTpl: [
-                        '{year}+{name}'
-                    ],
                     store: 'StrategicModel',
-                    valueField: 'id'
+                    mode: 'local',
+                    valueField: 'id',
+                    listConfig: {
+                            itemTpl: [
+                                '<div data-qtip="{name}: {year}">{year} - {name}</div>'
+                            ]
+                        }
+                },
+                {
+                    xtype: 'numberfield',
+                    id: 'strategy-seq',
+                    anchor: '100%',
+                    fieldLabel: 'Seq',
+                    labelAlign: 'right',
+                    name: 'seq',
+                    minValue: 1
                 },
                 {
                     xtype: 'textareafield',
@@ -83,8 +96,11 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Strategy', {
     ],
 
     onLoad: function(record) {
-        console.log(record);
-        Ext.getCmp('strategic-name').setValue(record.data.name);
+        console.log(record.data);
+        console.log(record.data.strategic_id);
+        Ext.getCmp('strategy-name').setValue(record.data.name);
+        Ext.getCmp('strategic-id').setValue(record.data.strategic_id);
+        Ext.getCmp('strategy-seq').setValue(record.data.seq);
     }
 
 });

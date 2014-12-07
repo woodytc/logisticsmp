@@ -19,41 +19,69 @@ Ext.define('LogisticSMP.model.ProjectModel', {
     requires: [
         'Ext.data.field.Integer',
         'Ext.data.field.String',
-        'Ext.data.field.Number'
+        'Ext.data.field.Number',
+        'Ext.data.field.Date'
     ],
-
+/*
+    {
+	id: "1",
+	strategic_id: "1",
+	strategy_id: "1",
+	name: "project",
+	seq: "1",
+	start_date: "0000-00-00",
+	end_date: "0000-00-00",
+	progress: "0",
+	budget: "0",
+	strategic_name: "sfsdfsdf",
+	strategy_name: "Test ยุทธศาสตร์ 1"
+	}
+*/
     fields: [
         {
-            type: 'int',
+            //type: 'int',
             name: 'id'
         },
         {
-            type: 'int',
+            //type: 'int',
+            name: 'strategic_id'
+        },
+        {
+            //type: 'int',
             name: 'strategy_id'
         },
         {
-            type: 'int',
-            name: 'year'
-        },
-        {
-            type: 'string',
-            name: 'strategy_name'
-        },
-        {
-            type: 'string',
+            //type: 'string',
             name: 'name'
         },
         {
-            type: 'float',
+            //type: 'int',
+            name: 'seq'
+        },
+        {
+            //type: 'date',
+            name: 'start_date'
+        },
+        {
+            //type: 'date',
+            name: 'end_date'
+        },
+        {
+            //type: 'float',
             name: 'progress'
         },
         {
-            type: 'float',
-            name: 'current'
+            //type: 'float',
+            name: 'budget'
         },
         {
-            type: 'float',
-            name: 'budget'
+           // type: 'string',
+            name: 'strategy_name'
+        },
+        {
+         //   type: 'string',
+            name: 'strategic_name'
         }
+        
     ]
 });

@@ -40,10 +40,10 @@ Ext.define('LogisticSMP.view.Data.ProjectTab4', {
     title: 'บริหารจัดการ กิจกรรม',
     titleAlign: 'center',
 
-    layout: {
-        type: 'vbox',
-        align: 'stretch'
-    },
+    layout : {
+		type : 'vbox',
+		align : 'stretch'
+	},
     dockedItems: [
         {
             xtype: 'form',

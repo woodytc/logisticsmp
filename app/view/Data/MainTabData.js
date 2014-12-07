@@ -54,10 +54,11 @@ Ext.define('LogisticSMP.view.Data.MainTabData', {
                 },
                 {
                     xtype: 'dataprojecttab4'
-                },
-                {
-                    xtype: 'dataprojecttab5'
                 }
+//                ,
+//                {
+//                    xtype: 'dataprojecttab5'
+//                }
             ]
         }
     ]

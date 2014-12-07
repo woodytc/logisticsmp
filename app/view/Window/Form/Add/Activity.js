@@ -18,8 +18,8 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Activity', {
     alias: 'widget.windowformaddactivity',
 
     requires: [
-        'LogisticSMP.view.Window.Form.Add.StrategicViewModel4',
-        'LogisticSMP.view.Window.Form.Add.StrategicViewController4',
+        'LogisticSMP.view.Window.Form.Add.ActivityViewModel',
+        'LogisticSMP.view.Window.Form.Add.ActivityViewController',
         'Ext.form.field.ComboBox',
         'Ext.form.field.Checkbox',
         'Ext.form.field.Number',
@@ -32,31 +32,38 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Activity', {
     viewModel: {
         type: 'windowformaddactivity'
     },
-    reference: 'form',
-    height: 468,
-    minHeight: 150,
-    minWidth: 250,
+    modal: true,
+    height: 430,
+    resizable: false,
     width: 750,
-    bodyPadding: 10,
     title: 'Edit StrategicModel',
     modal: true,
 
     items: [
         {
             xtype: 'combobox',
-            width: 745,
+            anchor: '100%',
+            id:'strategic-id',
             fieldLabel: 'Strategic',
             displayField: 'name',
+            labelAlign: 'right',
             store: 'StrategicModel',
             valueField: 'id',
+            listConfig: {
+                itemTpl: [
+                    '<div data-qtip="{name}: {year}">{year} - {name}</div>'
+                ]
+            },
             listeners: {
                 select: 'onComboboxStrategicSelect'
             }
         },
         {
             xtype: 'combobox',
-            width: 745,
+            anchor: '100%',
+            id:'strategy-id',
             fieldLabel: 'Strategy',
+            labelAlign:'right',
             displayField: 'name',
             store: 'StrategyModel',
             valueField: 'id',
@@ -66,7 +73,7 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Activity', {
         },
         {
             xtype: 'combobox',
-            width: 745,
+            anchor: '100%',
             fieldLabel: 'Project',
             displayField: 'name',
             store: 'ProjectModels',
@@ -85,7 +92,8 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Activity', {
         },
         {
             xtype: 'combobox',
-            width: 745,
+            anchor: '100%',
+            id:'project-id',
             fieldLabel: 'MainActivity',
             displayField: 'name',
             store: 'MainActivityModel',
@@ -93,36 +101,36 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Activity', {
         },
         {
             xtype: 'numberfield',
-            width: 175,
+            anchor: '100%',
             fieldLabel: 'SEQ'
         },
         {
             xtype: 'textfield',
-            width: 745,
+            anchor: '100%',
             fieldLabel: 'Name',
             name: 'name',
             allowBlank: false
         },
         {
             xtype: 'numberfield',
-            width: 332,
+            anchor: '100%',
             fieldLabel: 'Progress',
             minValue: 0
         },
         {
             xtype: 'numberfield',
-            width: 332,
+            anchor: '100%',
             fieldLabel: 'Budget',
             minValue: 0
         },
         {
             xtype: 'datefield',
-            width: 332,
+            anchor: '100%',
             fieldLabel: 'StartDate'
         },
         {
             xtype: 'datefield',
-            width: 332,
+            anchor: '100%',
             fieldLabel: 'EndDate'
         },
         {

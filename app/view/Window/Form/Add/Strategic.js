@@ -52,7 +52,8 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Strategic', {
                     displayField: 'year',
                     queryMode: 'local',
                     store: 'YearArrayStore',
-                    valueField: 'id'
+                    valueField: 'id',
+                    allowBlank: false
                 },
                 {
                     xtype: 'numberfield',
@@ -61,7 +62,8 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Strategic', {
                     fieldLabel: 'Seq',
                     labelAlign: 'right',
                     name: 'seq',
-                    minValue: 1
+                    minValue: 1,
+                    allowBlank: false
                 },
                 {
                     xtype: 'textareafield',
@@ -70,7 +72,8 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Strategic', {
                     id: 'strategic-name',
                     fieldLabel: 'Name',
                     labelAlign: 'right',
-                    name: 'name'
+                    name: 'name',
+                    allowBlank: false
                 },
                 {
                     xtype: 'button',

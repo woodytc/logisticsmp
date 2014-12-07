@@ -18,8 +18,8 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Project', {
     alias: 'widget.windowformaddproject',
 
     requires: [
-        'LogisticSMP.view.Window.Form.Add.StrategicViewModel2',
-        'LogisticSMP.view.Window.Form.Add.ViewController2',
+        'LogisticSMP.view.Window.Form.Add.ProjectViewController',
+        'LogisticSMP.view.Window.Form.Add.ProjectViewModel',
         'Ext.form.Panel',
         'Ext.form.field.ComboBox',
         'Ext.form.field.TextArea',
@@ -30,59 +30,112 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Project', {
     viewModel: {
         type: 'windowformaddproject'
     },
-    height: 288,
+    modal: true,
+    height: 430,
     resizable: false,
-    width: 616,
+    width: 750,
     title: 'จัดการโปรเจค',
 
     items: [
         {
             xtype: 'form',
-            id: 'form3',
+            id: 'form1',
             bodyPadding: 10,
             items: [
                 {
                     xtype: 'combobox',
                     anchor: '100%',
-                    id: 'project-strategic',
+                    id:'strategic-id',
                     fieldLabel: 'Strategic',
                     labelAlign: 'right',
                     displayField: 'name',
                     store: 'StrategicModel',
-                    valueField: 'id'
+                    mode: 'local',
+                    valueField: 'id',
+                    listConfig: {
+                            itemTpl: [
+                                '<div data-qtip="{name}: {year}">{year} - {name}</div>'
+                            ]
+                        }
                 },
                 {
                     xtype: 'combobox',
                     anchor: '100%',
-                    id: 'project-strategy',
-                    fieldLabel: 'Strategy',
+                    id:'strategy-id',
+                    fieldLabel: 'Strategic',
                     labelAlign: 'right',
                     displayField: 'name',
                     store: 'StrategyModel',
-                    valueField: 'id'
+                    mode: 'local',
+                    valueField: 'id',
+                    listeners: {
+                        change: 'onComboboxStrategicChange'
+                    }
+                    
+                },
+                {
+                    xtype: 'numberfield',
+                    id: 'project-seq',
+                    anchor: '100%',
+                    fieldLabel: 'Seq',
+                    labelAlign: 'right',
+                    name: 'seq',
+                    minValue: 1
                 },
                 {
                     xtype: 'textareafield',
                     anchor: '100%',
                     height: 130,
                     id: 'project-name',
-                    fieldLabel: 'ProjectName',
+                    fieldLabel: 'StrategyName',
                     labelAlign: 'right',
                     name: 'name'
                 },
                 {
+                    xtype: 'datefield',
+                    anchor: '100%',
+                    id:'start-date',
+                    fieldLabel: 'StartDate',
+                    labelAlign: 'right'
+                },
+                {
+                    xtype: 'datefield',
+                    anchor: '100%',
+                    id:'end-date',
+                    fieldLabel: 'EndDate',
+                    labelAlign: 'right'
+                },
+                {
+                    xtype: 'numberfield',
+                    id: 'project-progress',
+                    anchor: '100%',
+                    fieldLabel: 'Progress',
+                    labelAlign: 'right',
+                    name: 'progress',
+                    minValue: 0.001
+                },
+                {
+                    xtype: 'numberfield',
+                    id: 'project-budget',
+                    anchor: '100%',
+                    fieldLabel: 'Bugdet',
+                    labelAlign: 'right',
+                    name: 'budget',
+                    minValue: 1
+                },
+                {
                     xtype: 'button',
-                    margin: '0 10 0 100',
+                    margin: '0 0 0 100',
                     text: 'บันทึก',
                     listeners: {
-                        click: 'onButtonClick1'
+                        click: 'onSaveProjectClick'
                     }
                 },
                 {
                     xtype: 'button',
                     text: 'ยกเลิก',
                     listeners: {
-                        click: 'onButtonClick'
+                        click: 'onCancleProjectClick'
                     }
                 }
             ]
@@ -90,8 +143,15 @@ Ext.define('LogisticSMP.view.Window.Form.Add.Project', {
     ],
 
     onLoad: function(record) {
-        console.log(record);
-        Ext.getCmp('strategic-name').setValue(record.data.name);
+        console.log(record.data);
+        Ext.getCmp('strategic-id').setValue(parseInt(record.data.strategic_id,10));
+        Ext.getCmp('strategy-id').setValue(parseInt(record.data.strategy_id,10));
+        Ext.getCmp('project-seq').setValue(record.data.seq);
+        Ext.getCmp('project-name').setValue(record.data.name);
+        Ext.getCmp('project-progress').setValue(record.data.progress);
+        Ext.getCmp('project-budget').setValue(record.data.budget);
+        Ext.getCmp('start-date').setValue(record.data.start_date);
+        Ext.getCmp('end-date').setValue(record.data.end_date);
     }
 
 });

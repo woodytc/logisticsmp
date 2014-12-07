@@ -225,6 +225,7 @@ class PDOAdpter extends DBConfig {
             if ($rows_affected) {
                 print "\nrows affected = " . $statement->rowCount() . "\n\n";
             }
+            return true;
         } catch (PDOException $e) {
             $this->_dbConnection->rollback();
             die($e->getMessage());
